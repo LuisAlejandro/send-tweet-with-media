@@ -18,9 +18,9 @@ console: start
 	@docker-compose -p send-tweet-with-media -f docker-compose.yml exec \
 		--user luisalejandro send-tweet-with-media bash
 
-update_shelf: start
+tweet: start
 	@docker-compose -p send-tweet-with-media -f docker-compose.yml exec \
-		--user luisalejandro send-tweet-with-media python3 update_shelf.py
+		--user luisalejandro send-tweet-with-media python3 entrypoint.py
 
 stop:
 	@docker-compose -p send-tweet-with-media -f docker-compose.yml stop
@@ -35,10 +35,8 @@ destroy:
 
 virtualenv: start
 	@docker-compose -p send-tweet-with-media -f docker-compose.yml exec \
-		--user luisalejandro send-tweet-with-media python3 -m venv --clear --copies ./winvenv
+		--user luisalejandro send-tweet-with-media python3 -m venv --clear --copies ./virtualenv
 	@docker-compose -p send-tweet-with-media -f docker-compose.yml exec \
-		--user luisalejandro send-tweet-with-media ./winvenv/bin/pip install -U wheel setuptools
+		--user luisalejandro send-tweet-with-media ./virtualenv/bin/pip install -U wheel setuptools
 	@docker-compose -p send-tweet-with-media -f docker-compose.yml exec \
-		--user luisalejandro send-tweet-with-media ./winvenv/bin/pip install -r requirements.txt
-	@docker-compose -p send-tweet-with-media -f docker-compose.yml exec \
-		--user luisalejandro send-tweet-with-media ./winvenv/bin/pip install -r requirements-dev.txt
+		--user luisalejandro send-tweet-with-media ./virtualenv/bin/pip install -r requirements.txt -r requirements-dev.txt
