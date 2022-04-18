@@ -1,0 +1,13 @@
+name: send-tweet-with-media
+author: Luis Alejandro Martínez Faneyth
+description: GitHub Action for sending a tweet with an image
+
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - entrypoint.py
+
+branding:
+  icon: at-sign
+  color: blue

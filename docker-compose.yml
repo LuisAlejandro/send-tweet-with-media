@@ -1,0 +1,11 @@
+version: "3"
+services:
+  send-tweet-with-media:
+    image: luisalejandro/send-tweet-with-media:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/home/luisalejandro/app
+    env_file:
+      - .env
