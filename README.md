@@ -13,7 +13,7 @@ Current version: 0.1.0
 1. Create an app with the twitter account where you want to share the tweets (https://developer.twitter.com/apps). You might need to fill an application form before being able to create an app. More info [here](https://github.com/gr2m/twitter-together/blob/main/docs/01-create-twitter-app.md).
 2. Upload your images to a public access URL.
 
-## Workflow Usage
+## 🖥 Workflow Usage
 
 Configure your workflow to use `LuisAlejandro/send-tweet-with-media@v0.1.0`,
 and provide the tweet you want to send as the `STATUS_TEXT` env variable.
