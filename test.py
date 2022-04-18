@@ -17,6 +17,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
+import time
 import tempfile
 from urllib.request import urlopen
 
@@ -54,4 +55,8 @@ for imgurl in [status_image_url_1,
     media = api.media_upload(tmpimg)
     media_ids.append(media.media_id)
 
-api.update_status(status_text, media_ids=media_ids)
+tweet = api.update_status(status_text, media_ids=media_ids)
+
+time.sleep(60)
+
+api.destroy_status(tweet.id)
