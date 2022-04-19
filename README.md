@@ -39,7 +39,7 @@ jobs:
   tweet:
     runs-on: ubuntu-20.04
     steps:
-      - uses: LuisAlejandro/send-tweet-with-media@v0.1.0
+      - uses: LuisAlejandro/send-tweet-with-media@0.1.0
         env:
           TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
           TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
