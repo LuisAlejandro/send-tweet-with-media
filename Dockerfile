@@ -12,6 +12,8 @@ RUN pip install -r /root/requirements.txt
 RUN rm /root/requirements.txt
 
 COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.py /entrypoint.py
+
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["tail", "-f", "/dev/null"]
