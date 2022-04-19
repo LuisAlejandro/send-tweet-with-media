@@ -1,6 +1,15 @@
 # Changelog
 
 
+## 0.1.1 (2022-04-19)
+
+### Fixed
+
+* Fixing external exacution of action. [Luis Alejandro Martínez Faneyth]
+
+* Fixing LICENSE. [Luis Alejandro Martínez Faneyth]
+
+
 ## 0.1.0 (2022-04-18)
 
 ### Changed
