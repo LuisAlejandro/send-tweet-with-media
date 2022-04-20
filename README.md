@@ -6,7 +6,7 @@
 
 ---
 
-Current version: 0.1.1
+Current version: 0.2.0
 
 ## 🎒 Prep Work
 
@@ -15,7 +15,7 @@ Current version: 0.1.1
 
 ## 🖥 Workflow Usage
 
-Configure your workflow to use `LuisAlejandro/send-tweet-with-media@0.1.1`,
+Configure your workflow to use `LuisAlejandro/send-tweet-with-media@0.2.0`,
 and provide the tweet you want to send as the `STATUS_TEXT` env variable.
 
 You can add up to 4 images as URLs in `STATUS_IMAGE_URL_1`,
@@ -40,7 +40,7 @@ jobs:
   tweet:
     runs-on: ubuntu-20.04
     steps:
-      - uses: LuisAlejandro/send-tweet-with-media@0.1.1
+      - uses: LuisAlejandro/send-tweet-with-media@0.2.0
         env:
           TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
           TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
