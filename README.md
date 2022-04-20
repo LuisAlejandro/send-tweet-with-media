@@ -50,6 +50,8 @@ jobs:
           STATUS_IMAGE_URL_1: https://picsum.photos/1024/768
 ```
 
+Publish your changes, activate your actions if disabled and enjoy.
+
 ## 🕵🏾 Hacking suggestions
 
 - You can test the script locally with Docker Compose:
@@ -67,7 +69,7 @@ jobs:
   * Open a terminal and navigate to the newly created folder.
   * Change to the `develop` branch.
 
-          git branch develop
+          git checkout develop
 
   * Create a `.env` file with the content of the environment secrets as variables, like this (with real values):
 
