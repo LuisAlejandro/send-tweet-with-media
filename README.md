@@ -6,7 +6,7 @@
 
 ---
 
-Current version: 0.1.1
+Current version: 0.2.0
 
 ## 🎒 Prep Work
 
@@ -15,12 +15,13 @@ Current version: 0.1.1
 
 ## 🖥 Workflow Usage
 
-Configure your workflow to use `LuisAlejandro/send-tweet-with-media@v0.1.1`,
+Configure your workflow to use `LuisAlejandro/send-tweet-with-media@0.2.0`,
 and provide the tweet you want to send as the `STATUS_TEXT` env variable.
 
 You can add up to 4 images as URLs in `STATUS_IMAGE_URL_1`,
 `STATUS_IMAGE_URL_2`, `STATUS_IMAGE_URL_3` and `STATUS_IMAGE_URL_4`
 env variables. The script will download and attach them to the tweet.
+You can omit all 4 variables and no image will be attached.
 
 Provide the authentication keys and tokens for your Twitter app
 as the `TWITTER_CONSUMER_KEY`, `TWITTER_CONSUMER_SECRET`,
@@ -30,7 +31,7 @@ as the `TWITTER_CONSUMER_KEY`, `TWITTER_CONSUMER_SECRET`,
 for each secret.
 
 For example, create a file `.github/workflows/push.yml` on
-a github repository.
+a github repository with the following content:
 
 ```yml
 name: Send a Tweet
@@ -39,7 +40,7 @@ jobs:
   tweet:
     runs-on: ubuntu-20.04
     steps:
-      - uses: LuisAlejandro/send-tweet-with-media@0.1.1
+      - uses: LuisAlejandro/send-tweet-with-media@0.2.0
         env:
           TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
           TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
@@ -47,10 +48,9 @@ jobs:
           TWITTER_OAUTH_SECRET: ${{ secrets.TWITTER_OAUTH_SECRET }}
           STATUS_TEXT: "Hi! I'm tweeting from Github actions using https://github.com/LuisAlejandro/send-tweet-with-media"
           STATUS_IMAGE_URL_1: https://picsum.photos/1024/768
-          STATUS_IMAGE_URL_2: https://picsum.photos/1024/768
-          STATUS_IMAGE_URL_3: https://picsum.photos/1024/768
-          STATUS_IMAGE_URL_4: https://picsum.photos/1024/768
 ```
+
+Publish your changes, activate your actions if disabled and enjoy.
 
 ## 🕵🏾 Hacking suggestions
 
@@ -69,7 +69,7 @@ jobs:
   * Open a terminal and navigate to the newly created folder.
   * Change to the `develop` branch.
 
-          git branch develop
+          git checkout develop
 
   * Create a `.env` file with the content of the environment secrets as variables, like this (with real values):
 
@@ -89,7 +89,7 @@ jobs:
 
   * You can execute the tweet script with this command:
 
-          make tweet
+          make publish
 
   * Or, alternatively, open a console where you can manually execute the script and debug any errors:
 
