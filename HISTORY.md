@@ -1,6 +1,22 @@
 # Changelog
 
 
+## 0.2.0 (2022-04-20)
+
+### Changed
+
+* Reducing waiting time for test tweet. [Luis Alejandro Martínez Faneyth]
+
+* Improving docs. [Luis Alejandro Martínez Faneyth]
+
+* Correcting Readme. [Luis Alejandro Martínez Faneyth]
+
+
+### Fixed
+
+* Fixing typo on readme. [Luis Alejandro Martínez Faneyth]
+
+
 ## 0.1.1 (2022-04-19)
 
 ### Fixed
