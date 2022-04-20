@@ -89,7 +89,7 @@ Publish your changes, activate your actions if disabled and enjoy.
 
   * You can execute the tweet script with this command:
 
-          make tweet
+          make publish
 
   * Or, alternatively, open a console where you can manually execute the script and debug any errors:
 

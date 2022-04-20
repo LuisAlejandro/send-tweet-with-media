@@ -18,7 +18,7 @@ console: start
 	@docker-compose -p send-tweet-with-media -f docker-compose.yml exec \
 		--user luisalejandro send-tweet-with-media bash
 
-tweet: start
+publish: start
 	@docker-compose -p send-tweet-with-media -f docker-compose.yml exec \
 		--user luisalejandro send-tweet-with-media python3 entrypoint.py
 
