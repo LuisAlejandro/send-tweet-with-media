@@ -57,6 +57,6 @@ for imgurl in [status_image_url_1,
 
 tweet = api.update_status(status_text, media_ids=media_ids)
 
-time.sleep(60)
+time.sleep(10)
 
 api.destroy_status(tweet.id)
