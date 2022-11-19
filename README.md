@@ -1,12 +1,4 @@
-<p align='center'>
-  <img src="https://github.com/LuisAlejandro/send-tweet-with-media/blob/develop/branding/banner.svg">
-  <h3 align="center">Send tweet with media</h3>
-  <p align="center">GitHub Action for tweeting with images</p>
-</p>
-
----
-
-Current version: 0.2.0
+# Development of this app has been halted in favor of [Agoras](https://github.com/LuisAlejandro/agoras)
 
 ## 🎒 Prep Work
 
